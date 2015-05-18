@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: 216737010b0d1f045948f326c6aa649f
+timeCreated: 1430975798
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Peach Ro10
+    100002: Peach Ro11
+    100004: Peach Ro12
+    100006: Peach Ro13
+    100008: Peach Ro14
+    100010: Peach Ro15
+    100012: Peach Ro16
+    100014: Peach Ro17
+    100016: Peach Ro18
+    100018: Peach Ro19
+    100020: Peach Ro20
+    100022: Peach Ro21
+    100024: Peach Ro22
+    100026: Peach Ro23
+    100028: Peach Ro24
+    100030: Peach Ro25
+    100032: Peach Ro26
+    100034: Peach Ro27
+    100036: Peach Ro28
+    100038: Peach Ro29
+    100040: Peach Ro30
+    100042: Peach Ros0
+    100044: Peach Ros1
+    100046: Peach Ros2
+    100048: Peach Ros3
+    100050: Peach Ros4
+    100052: Peach Ros5
+    100054: Peach Ros6
+    100056: Peach Ros7
+    100058: Peach Ros8
+    100060: Peach Ros9
+    100062: Peach Rose
+    100064: //RootNode
+    400000: Peach Ro10
+    400002: Peach Ro11
+    400004: Peach Ro12
+    400006: Peach Ro13
+    400008: Peach Ro14
+    400010: Peach Ro15
+    400012: Peach Ro16
+    400014: Peach Ro17
+    400016: Peach Ro18
+    400018: Peach Ro19
+    400020: Peach Ro20
+    400022: Peach Ro21
+    400024: Peach Ro22
+    400026: Peach Ro23
+    400028: Peach Ro24
+    400030: Peach Ro25
+    400032: Peach Ro26
+    400034: Peach Ro27
+    400036: Peach Ro28
+    400038: Peach Ro29
+    400040: Peach Ro30
+    400042: Peach Ros0
+    400044: Peach Ros1
+    400046: Peach Ros2
+    400048: Peach Ros3
+    400050: Peach Ros4
+    400052: Peach Ros5
+    400054: Peach Ros6
+    400056: Peach Ros7
+    400058: Peach Ros8
+    400060: Peach Ros9
+    400062: Peach Rose
+    400064: //RootNode
+    2300000: Peach Ro10
+    2300002: Peach Ro11
+    2300004: Peach Ro12
+    2300006: Peach Ro13
+    2300008: Peach Ro14
+    2300010: Peach Ro15
+    2300012: Peach Ro16
+    2300014: Peach Ro17
+    2300016: Peach Ro18
+    2300018: Peach Ro19
+    2300020: Peach Ro20
+    2300022: Peach Ro21
+    2300024: Peach Ro22
+    2300026: Peach Ro23
+    2300028: Peach Ro24
+    2300030: Peach Ro25
+    2300032: Peach Ro26
+    2300034: Peach Ro27
+    2300036: Peach Ro28
+    2300038: Peach Ro29
+    2300040: Peach Ro30
+    2300042: Peach Ros0
+    2300044: Peach Ros1
+    2300046: Peach Ros2
+    2300048: Peach Ros3
+    2300050: Peach Ros4
+    2300052: Peach Ros5
+    2300054: Peach Ros6
+    2300056: Peach Ros7
+    2300058: Peach Ros8
+    2300060: Peach Ros9
+    2300062: Peach Rose
+    3300000: Peach Ro10
+    3300002: Peach Ro11
+    3300004: Peach Ro12
+    3300006: Peach Ro13
+    3300008: Peach Ro14
+    3300010: Peach Ro15
+    3300012: Peach Ro16
+    3300014: Peach Ro17
+    3300016: Peach Ro18
+    3300018: Peach Ro19
+    3300020: Peach Ro20
+    3300022: Peach Ro21
+    3300024: Peach Ro22
+    3300026: Peach Ro23
+    3300028: Peach Ro24
+    3300030: Peach Ro25
+    3300032: Peach Ro26
+    3300034: Peach Ro27
+    3300036: Peach Ro28
+    3300038: Peach Ro29
+    3300040: Peach Ro30
+    3300042: Peach Ros0
+    3300044: Peach Ros1
+    3300046: Peach Ros2
+    3300048: Peach Ros3
+    3300050: Peach Ros4
+    3300052: Peach Ros5
+    3300054: Peach Ros6
+    3300056: Peach Ros7
+    3300058: Peach Ros8
+    3300060: Peach Ros9
+    3300062: Peach Rose
+    4300000: Peach Rose
+    4300002: Peach Ros0
+    4300004: Peach Ros1
+    4300006: Peach Ros2
+    4300008: Peach Ros3
+    4300010: Peach Ros4
+    4300012: Peach Ros5
+    4300014: Peach Ros6
+    4300016: Peach Ros7
+    4300018: Peach Ros8
+    4300020: Peach Ros9
+    4300022: Peach Ro10
+    4300024: Peach Ro11
+    4300026: Peach Ro12
+    4300028: Peach Ro13
+    4300030: Peach Ro14
+    4300032: Peach Ro15
+    4300034: Peach Ro16
+    4300036: Peach Ro17
+    4300038: Peach Ro18
+    4300040: Peach Ro19
+    4300042: Peach Ro20
+    4300044: Peach Ro21
+    4300046: Peach Ro22
+    4300048: Peach Ro23
+    4300050: Peach Ro24
+    4300052: Peach Ro25
+    4300054: Peach Ro26
+    4300056: Peach Ro27
+    4300058: Peach Ro28
+    4300060: Peach Ro29
+    4300062: Peach Ro30
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
