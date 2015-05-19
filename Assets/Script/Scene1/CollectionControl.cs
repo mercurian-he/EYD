@@ -25,6 +25,7 @@ public class CollectionControl : MonoBehaviour {
 				halo.GetType ().GetProperty ("enabled").SetValue (halo, true, null);
 				if (Input.GetMouseButton (1)) {
 					objShelf.addCollection (colliderObj.name); 
+					if (LevelControl1.state != LevelControl1.STATES.Finish)LevelControl1.state ++;
 					Destroy (colliderObj);
 				}
 			} else
