@@ -35,6 +35,10 @@ public class StartMenu : MonoBehaviour {
 			Application.LoadLevel(1);
 		}
 
+		if (GUI.Button (new Rect (10, 40, buttonWidth, buttonHeight), "Quit")) {
+			Application.Quit();
+		}
+
 
 	}
 }

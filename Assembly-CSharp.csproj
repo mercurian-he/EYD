@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\Const.cs" />
      <Compile Include="Assets\Script\GlobalManager.cs" />
      <Compile Include="Assets\Script\Scene1\CameraControl.cs" />
      <Compile Include="Assets\Script\Scene1\CollectionControl.cs" />
@@ -53,6 +54,7 @@
      <Compile Include="Assets\Script\Scene1\ObjControl.cs" />
      <Compile Include="Assets\Script\Scene1\ObjShelf.cs" />
      <Compile Include="Assets\Script\Scene1\WaterballControl.cs" />
+     <Compile Include="Assets\Script\Scene2\LevelControl2.cs" />
      <Compile Include="Assets\Script\Start\StartMenu.cs" />
      <None Include="Assets\Forest Grounds - Terrain Texture Pack\Readme.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />

@@ -106,4 +106,10 @@ public class LevelControl1 : MonoBehaviour {
 
 		}
 	}
+
+	void OnGUI(){
+		if (GUI.Button (new Rect(Screen.width - 210, Screen.height - 40, 200, 30), "Return to Menu")){
+			Application.LoadLevel(0);
+		}
+	}
 }
