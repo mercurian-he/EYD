@@ -15,14 +15,23 @@ public class CameraControl : MonoBehaviour {
 	private float scale = 0f;
 	private float scaleMax;
 
+	private float shelfWidth;
+
 
 	// Use this for initialization
 	void Start () {
 		scaleMax = scaleSpeed * 4;
+
+		ObjShelf os = (ObjShelf) GameObject.Find("Main Camera").GetComponent("ObjShelf");
+		shelfWidth = os.getShelfWidth ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		bool movable = Input.mousePosition.x > shelfWidth || Input.mousePosition.x < 0;
+		if (!movable)
+			return;
 
 		//look up and down
 		rotationY += Input.GetAxis("Mouse Y") * sensitivityY;

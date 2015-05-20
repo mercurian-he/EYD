@@ -25,7 +25,6 @@ public class CollectionControl : MonoBehaviour {
 				halo.GetType ().GetProperty ("enabled").SetValue (halo, true, null);
 				if (Input.GetMouseButton (1)) {
 					objShelf.addCollection (colliderObj.name); 
-					if (LevelControl1.state != LevelControl1.STATES.Finish)LevelControl1.state ++;
 					Destroy (colliderObj);
 				}
 			} else
@@ -44,7 +43,6 @@ public class CollectionControl : MonoBehaviour {
 	void OnGUI(){
 		GUI.color = Color.white;
 		GUI.skin.label.fontSize = 30;
-		
 		if (colliderObj != null && colliderObj.tag.Equals ("Collections")) {
 			///GUI.Label (new Rect (Screen.width - 110, 0, 100, 50), colliderObj.name);
 			//GUI.Label (new Rect (Screen.width - 110, 60, 100, 50), colliderObj.tag);

@@ -11,14 +11,23 @@ public class ObjControl : MonoBehaviour {
 	private float joltMax;
 	private float joltDelta;
 
+	private float shelfWidth;
+
 	// Use this for initialization
 	void Start () {
 		joltMax = translateSpeed * 2f;
 		joltDelta = joltMax / 10f;
+
+		ObjShelf os = (ObjShelf) GameObject.Find("Main Camera").GetComponent("ObjShelf");
+		shelfWidth = os.getShelfWidth ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
+		bool movable = Input.mousePosition.x > shelfWidth || Input.mousePosition.x < 0;
+		if (!movable)
+			return;
 
 		//rotation
 		float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
@@ -56,7 +65,8 @@ public class ObjControl : MonoBehaviour {
 
 	void OnGUI(){
 		//GUI.Label (new Rect (10, 10, 100, 30), Terrain.activeTerrain.SampleHeight (transform.position).ToString ());
-
+		//GUI.Label (new Rect (40, 10, 100, 30), shelfWidth.ToString());
+		//GUI.Label (new Rect (40, 40, 100, 30), Input.mousePosition.x.ToString());
 
 	}
 }

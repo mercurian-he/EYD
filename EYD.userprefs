@@ -1,11 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Scene1\LevelControl1.cs">
     <Files>
-      <File FileName="Assets\Script\Scene2\LevelControl2.cs" Line="24" Column="19" />
-      <File FileName="Assets\Script\Start\StartMenu.cs" Line="38" Column="48" />
-      <File FileName="Assets\Script\Scene1\LevelControl1.cs" Line="85" Column="29" />
-      <File FileName="Assets\Script\Const.cs" Line="4" Column="37" />
+      <File FileName="Assets\Script\Scene1\ObjShelf.cs" Line="97" Column="30" />
+      <File FileName="Assets\Script\Scene1\LevelControl1.cs" Line="101" Column="24" />
+      <File FileName="Assets\Script\Scene1\CollectionControl.cs" Line="27" Column="49" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
