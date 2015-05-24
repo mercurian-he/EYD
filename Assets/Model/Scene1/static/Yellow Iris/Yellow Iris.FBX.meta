@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: 36fa3dad819572d489140c5cb9147460
+timeCreated: 1430148787
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Yellow I10
+    100002: Yellow I11
+    100004: Yellow I12
+    100006: Yellow Ir0
+    100008: Yellow Ir1
+    100010: Yellow Ir2
+    100012: Yellow Ir3
+    100014: Yellow Ir4
+    100016: Yellow Ir5
+    100018: Yellow Ir6
+    100020: Yellow Ir7
+    100022: Yellow Ir8
+    100024: Yellow Ir9
+    100026: Yellow Iri
+    100028: //RootNode
+    400000: Yellow I10
+    400002: Yellow I11
+    400004: Yellow I12
+    400006: Yellow Ir0
+    400008: Yellow Ir1
+    400010: Yellow Ir2
+    400012: Yellow Ir3
+    400014: Yellow Ir4
+    400016: Yellow Ir5
+    400018: Yellow Ir6
+    400020: Yellow Ir7
+    400022: Yellow Ir8
+    400024: Yellow Ir9
+    400026: Yellow Iri
+    400028: //RootNode
+    2300000: Yellow I10
+    2300002: Yellow I11
+    2300004: Yellow I12
+    2300006: Yellow Ir0
+    2300008: Yellow Ir1
+    2300010: Yellow Ir2
+    2300012: Yellow Ir3
+    2300014: Yellow Ir4
+    2300016: Yellow Ir5
+    2300018: Yellow Ir6
+    2300020: Yellow Ir7
+    2300022: Yellow Ir8
+    2300024: Yellow Ir9
+    2300026: Yellow Iri
+    3300000: Yellow I10
+    3300002: Yellow I11
+    3300004: Yellow I12
+    3300006: Yellow Ir0
+    3300008: Yellow Ir1
+    3300010: Yellow Ir2
+    3300012: Yellow Ir3
+    3300014: Yellow Ir4
+    3300016: Yellow Ir5
+    3300018: Yellow Ir6
+    3300020: Yellow Ir7
+    3300022: Yellow Ir8
+    3300024: Yellow Ir9
+    3300026: Yellow Iri
+    4300000: Yellow I12
+    4300002: Yellow I11
+    4300004: Yellow I10
+    4300006: Yellow Ir9
+    4300008: Yellow Ir8
+    4300010: Yellow Ir7
+    4300012: Yellow Ir6
+    4300014: Yellow Ir5
+    4300016: Yellow Ir4
+    4300018: Yellow Ir3
+    4300020: Yellow Ir2
+    4300022: Yellow Ir1
+    4300024: Yellow Ir0
+    4300026: Yellow Iri
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
