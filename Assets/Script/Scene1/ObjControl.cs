@@ -5,7 +5,9 @@ public class ObjControl : MonoBehaviour {
 
 	private bool viewControlOn = true;
 
-	private float sensitivityX = 2f;
+	private float mouseSensitivityX = 2f;
+	private float keySensitivityX = 2f;
+
 	public float translateSpeed = 0.8f;
 	public float baseHeight = 120f;
 
@@ -27,24 +29,37 @@ public class ObjControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		bool movable = Input.mousePosition.x > shelfWidth || Input.mousePosition.x < 0;
-		if (!movable)
-			return;
+		//bool movable = Input.mousePosition.x > shelfWidth || Input.mousePosition.x < 0;
+		//if (!movable)
+		//	return;
 
 		//rotation
-		float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			viewControlOn = !viewControlOn;
 		}
+		float rotationX = transform.localEulerAngles.y;
+		//mouse
 		if (viewControlOn) {
-			transform.localEulerAngles = new Vector3 (0, rotationX, 0);
+			rotationX += Input.GetAxis("Mouse X") * mouseSensitivityX;
 		}
+		//keyboard
+		if (Input.GetKey (KeyCode.LeftArrow)) {
+			rotationX += -keySensitivityX;
+		}
+		if (Input.GetKey (KeyCode.RightArrow)) {
+			rotationX += keySensitivityX;
+		}
+		transform.localEulerAngles = new Vector3 (0, rotationX, 0);
 
 		//move
-		if (Input.GetMouseButton (0)) {
+		if (Input.GetMouseButton (0) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)) {
 
 			//walk forward
-			transform.Translate(Vector3.forward * translateSpeed);
+			if (Input.GetKey(KeyCode.DownArrow)){
+				transform.Translate(-Vector3.forward * translateSpeed);
+			} else {
+				transform.Translate(Vector3.forward * translateSpeed);
+			}
 
 			//jolt
 			jolt += joltDelta;
