@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ObjControl : MonoBehaviour {
 
+	private bool viewControlOn = true;
+
 	private float sensitivityX = 2f;
 	public float translateSpeed = 0.8f;
 	public float baseHeight = 120f;
@@ -31,7 +33,12 @@ public class ObjControl : MonoBehaviour {
 
 		//rotation
 		float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
-		transform.localEulerAngles = new Vector3(0, rotationX, 0);
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			viewControlOn = !viewControlOn;
+		}
+		if (viewControlOn) {
+			transform.localEulerAngles = new Vector3 (0, rotationX, 0);
+		}
 
 		//move
 		if (Input.GetMouseButton (0)) {

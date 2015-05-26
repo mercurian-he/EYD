@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CameraControl : MonoBehaviour {
 
+	private bool viewControlOn = true;
+
 	private float sensitivityY = 5f;
 	
 	private float minimumY = -60f;
@@ -36,8 +38,12 @@ public class CameraControl : MonoBehaviour {
 		//look up and down
 		rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
 		rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-
-		transform.localEulerAngles = new Vector3(-rotationY, 0, 0);
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			viewControlOn = !viewControlOn;
+		}
+		if (viewControlOn) {
+			transform.localEulerAngles = new Vector3 (-rotationY, 0, 0);
+		}
 
 
 		//scale up and down
