@@ -5,13 +5,13 @@ public class CameraControl : MonoBehaviour {
 
 	private bool viewControlOn = true;
 
-	private float sensitivityY = 5f;
+	private float mouseSensitivityY = 5f;
 	
 	private float minimumY = -60f;
 	private float maximumY = 60f;
 
 	private float rotationY = 0f;
-
+	private float rotationBaseY = 0f;
 
 	public float scaleSpeed = 10f;
 	private float scale = 0f;
@@ -31,17 +31,17 @@ public class CameraControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		bool movable = Input.mousePosition.x > shelfWidth || Input.mousePosition.x < 0;
-		if (!movable)
-			return;
+		//bool movable = Input.mousePosition.x > shelfWidth || Input.mousePosition.x < 0;
+		//if (!movable)
+		//	return;
 
 		//look up and down
-		rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-		rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			viewControlOn = !viewControlOn;
 		}
 		if (viewControlOn) {
+			rotationY += Input.GetAxis ("Mouse Y") * mouseSensitivityY;
+			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
 			transform.localEulerAngles = new Vector3 (-rotationY, 0, 0);
 		}
 
