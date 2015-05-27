@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: a46445cc17c0d5c40889eb8816580a8e
 timeCreated: 1432651641
+=======
+guid: 9f8ef9dc698ebf04d907e80e06f07f53
+timeCreated: 1432655515
+>>>>>>> dfa11740ec125c60d00d35c8f40de8728680ec9d
 licenseType: Free
 ShaderImporter:
   defaultTextures: []

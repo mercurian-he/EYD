@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ObjControl : MonoBehaviour {
 
+	private CharacterController controller;
+
 	private bool viewControlOn = true;
 
 	private float mouseSensitivityX = 2f;
@@ -19,6 +21,9 @@ public class ObjControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		controller = GetComponent<CharacterController> ();
+
 		joltMax = translateSpeed * 2f;
 		joltDelta = joltMax / 10f;
 
@@ -56,9 +61,14 @@ public class ObjControl : MonoBehaviour {
 
 			//walk forward
 			if (Input.GetKey(KeyCode.DownArrow)){
-				transform.Translate(-Vector3.forward * translateSpeed);
+				//transform.Translate(-Vector3.forward * translateSpeed);
+				Vector3 moveDirection = transform.TransformDirection(-Vector3.forward);
+				controller.Move(moveDirection * translateSpeed);
+
 			} else {
-				transform.Translate(Vector3.forward * translateSpeed);
+				//transform.Translate(Vector3.forward * translateSpeed);
+				Vector3 moveDirection = transform.TransformDirection(Vector3.forward);
+				controller.Move(moveDirection * translateSpeed);
 			}
 
 			//jolt

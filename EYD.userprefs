@@ -1,8 +1,17 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Scene1\ObjControl.cs">
     <Files>
       <File FileName="Assets\Script\Scene1\ObjControl.cs" Line="30" Column="18" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Scene1\ObjControl.cs">
+    <Files>
+      <File FileName="EYD.sln" Line="1" Column="1" />
+      <File FileName="Assets\Script\Scene1\ObjControl.cs" Line="67" Column="5" />
+      <File FileName="Assets\Script\Scene1\CameraControl.cs" Line="45" Column="30" />
+>>>>>>> dfa11740ec125c60d00d35c8f40de8728680ec9d
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
