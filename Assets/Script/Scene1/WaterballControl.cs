@@ -10,9 +10,12 @@ public class WaterballControl : MonoBehaviour {
 	public ParticleSystem rise_water;
 
 	private float cur_r;
-	public const float MAXRADIUS = 50.0f;
-	public const float EXPANDSPEED = 0.2f;
+	public const float MAXRADIUS = 250.0f;
+	public const float EXPANDSPEED = 1f;
 	private short expand;	//expand or shrink
+
+	public float m_SpeedU = -0.1f;
+	public float m_SpeedV = -0.1f;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +31,7 @@ public class WaterballControl : MonoBehaviour {
 		// Activate expand state
 		if (Input.GetKeyDown(KeyCode.A)) {
 			Debug.Log("Input:A");
-			float time = waterball.transform.position.y / rise_water.startSpeed;
+			float time = (waterball.transform.position.y-rise_water.transform.position.y) / rise_water.startSpeed;
 			Invoke ("activeExpand",time);
 			rise_water.enableEmission = true;
 		}
@@ -59,7 +62,16 @@ public class WaterballControl : MonoBehaviour {
 				}
 		}
 
-		waterball.transform.Rotate (new Vector3 (0, rotatespeed, 0));
+		//Waterball Animation
+		//waterball.transform.Rotate (new Vector3 (0, rotatespeed, 0));
+		float newOffsetU = Time.time * m_SpeedU;
+		float newOffsetV = Time.time * m_SpeedV;
+		Renderer renderer;
+		renderer = waterball.GetComponent <Renderer>();
+		if (renderer) {
+			renderer.material.mainTextureOffset = new Vector2(newOffsetU,newOffsetV);
+		}
+
 	}
 
 	//Update the states to enable expand
