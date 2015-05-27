@@ -1,11 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\Homework\Assets\Scrips\cameracontrol.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\Homework\Assets\Scrips\gamecontrol.cs">
     <Files>
-      <File FileName="..\Homework\Assets\Scrips\cameracontrol.cs" Line="61" Column="27" />
-      <File FileName="..\Homework\Assets\Scrips\gamecontrol.cs" Line="55" Column="3" />
-      <File FileName="..\Homework\Assets\Scrips\planecontrol.cs" Line="31" Column="18" />
-      <File FileName="..\Homework\Assets\Scrips\charactercontrol.cs" Line="73" Column="24" />
+      <File FileName="..\Homework\Assets\Scrips\gamecontrol.cs" Line="62" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
