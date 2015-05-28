@@ -56,11 +56,7 @@
      <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
      <None Include="Assets\Forest Grounds - Terrain Texture Pack\Readme.txt" />
-<<<<<<< HEAD
      <None Include="Assets\Shader\watershader.shader" />
-=======
-     <None Include="Assets\Shader\Toon.shader" />
->>>>>>> dfa11740ec125c60d00d35c8f40de8728680ec9d
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Shader\double-face_texture.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
