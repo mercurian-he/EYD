@@ -50,12 +50,14 @@
      <Compile Include="Assets\Elementals\Scripts\TestParticles.cs" />
      <Compile Include="Assets\Script\Const.cs" />
      <Compile Include="Assets\Script\GlobalManager.cs" />
+     <Compile Include="Assets\Script\Scene1\BabyFloat.cs" />
      <Compile Include="Assets\Script\Scene1\CameraControl.cs" />
      <Compile Include="Assets\Script\Scene1\CollectionControl.cs" />
      <Compile Include="Assets\Script\Scene1\LevelControl1.cs" />
      <Compile Include="Assets\Script\Scene1\ObjControl.cs" />
      <Compile Include="Assets\Script\Scene1\ObjShelf.cs" />
      <Compile Include="Assets\Script\Scene1\WaterballControl.cs" />
+     <Compile Include="Assets\Script\Scene1\YellowAnim.cs" />
      <Compile Include="Assets\Script\Scene2\LevelControl2.cs" />
      <Compile Include="Assets\Script\Start\StartMenu.cs" />
      <None Include="Assets\Forest Grounds - Terrain Texture Pack\Readme.txt" />
