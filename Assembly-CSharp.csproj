@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>E:/Softwares/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/develop/tools/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>E:/Softwares/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/develop/tools/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -54,8 +54,10 @@
      <Compile Include="Assets\Script\Scene1\CameraControl.cs" />
      <Compile Include="Assets\Script\Scene1\CollectionControl.cs" />
      <Compile Include="Assets\Script\Scene1\LevelControl1.cs" />
+     <Compile Include="Assets\Script\Scene1\LighterControl.cs" />
      <Compile Include="Assets\Script\Scene1\ObjControl.cs" />
      <Compile Include="Assets\Script\Scene1\ObjShelf.cs" />
+     <Compile Include="Assets\Script\Scene1\PaperControl.cs" />
      <Compile Include="Assets\Script\Scene1\WaterballControl.cs" />
      <Compile Include="Assets\Script\Scene1\YellowAnim.cs" />
      <Compile Include="Assets\Script\Scene2\LevelControl2.cs" />
@@ -72,10 +74,10 @@
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
      <None Include="Assets\Shader\Toon.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>E:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/develop/tools/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>E:/Softwares/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>D:/develop/tools/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

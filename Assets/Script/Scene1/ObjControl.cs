@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ObjControl : MonoBehaviour {
 
+	public static bool selectingObj = false;
+
 	private CharacterController controller;
 
 	private bool viewControlOn = true;
@@ -33,10 +35,6 @@ public class ObjControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-		//bool movable = Input.mousePosition.x > shelfWidth || Input.mousePosition.x < 0;
-		//if (!movable)
-		//	return;
 
 		//rotation
 		if (Input.GetKeyDown (KeyCode.Space)) {
@@ -56,7 +54,21 @@ public class ObjControl : MonoBehaviour {
 		}
 		transform.localEulerAngles = new Vector3 (0, rotationX, 0);
 
+
+
 		//move
+
+		if (selectingObj) {
+			if (Input.GetMouseButtonDown(0)){
+				selectingObj = false;
+			}
+			return;
+		}
+		
+		bool movable = Input.mousePosition.x > shelfWidth || Input.mousePosition.x < 0;
+		if (!movable)
+			return;
+
 		if (Input.GetMouseButton (0) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)) {
 
 			//walk forward

@@ -10,6 +10,7 @@ public class LevelControl1 : MonoBehaviour {
 		GreenUsed,
 		BlueUsed,
 		RedUsed,
+		LighterPicked,
 		LighterUsed,
 		Finish
 	};
@@ -110,6 +111,12 @@ public class LevelControl1 : MonoBehaviour {
 				go.SetActive(true);
 			}
 			break;
+		case STATES.LighterPicked:
+			LighterControl.isUsed = true;
+			//if (PaperControl.isOpen && Input.GetMouseButtonDown(0)){
+				//state = STATES.LighterUsed;
+			//}
+			break;
 		case STATES.LighterUsed:
 			break;
 		case STATES.Finish:
@@ -157,6 +164,9 @@ public class LevelControl1 : MonoBehaviour {
 		foreach (GameObject go in yellowVisibles) {
 			go.SetActive(false);
 		}
+
+		
+		LighterControl.isUsed = false;
 
 
 

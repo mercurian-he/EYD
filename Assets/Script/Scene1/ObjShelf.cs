@@ -10,6 +10,10 @@ public class ObjShelf : MonoBehaviour {
 	private const float heightBottom = 66f;
 	private const float heightEmpty = 478f;
 
+	private float moveSpeed = 5.0f;
+	private bool shelfOpen = false;
+	private float shelfPosition;
+
 	private float ratio;
 
 	private float top;
@@ -22,6 +26,8 @@ public class ObjShelf : MonoBehaviour {
 	/*mouse*/
 	private int mousePosition;
 	private int isUsed;	//start from 1, 0 is not used
+
+	private int paperPosition;
 
 	/*textures*/
 	public GUISkin skin;
@@ -37,6 +43,7 @@ public class ObjShelf : MonoBehaviour {
 	public Texture textureRedLens;
 	public Texture textureYellowLens;
 	public Texture textureLighter;
+	public Texture texturePaper;
 
 
 	void Awake(){
@@ -48,6 +55,8 @@ public class ObjShelf : MonoBehaviour {
 		heightTopRatio = ratio * heightTop;
 		heightBottomRatio = ratio * heightBottom;
 		heightEmptyRatio = ratio * heightEmpty;
+
+		shelfPosition = -width;
 
 	}
 
@@ -68,6 +77,23 @@ public class ObjShelf : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			shelfOpen = !shelfOpen;
+		}
+		if (shelfOpen && shelfPosition < 0) {
+			shelfPosition += moveSpeed;
+			if (shelfPosition > 0) shelfPosition = 0f;
+		}
+		if (!shelfOpen && shelfPosition > -width) {
+			shelfPosition -= moveSpeed;
+			if (shelfPosition < -width) shelfPosition = -width;
+		}
+
+		if (!shelfOpen) {
+			return;
+		}
+
 		for (int i = 0; i < 5; i++) {
 			textures[i] = getTextureByName(objNames[objStart + i]);
 		}
@@ -78,15 +104,26 @@ public class ObjShelf : MonoBehaviour {
 		if (0 < mouseX && mouseX < width && top + heightTopRatio < mouseY && mouseY < top + heightTopRatio + heightEmptyRatio * 5) {
 			mousePosition = (int) Mathf.Floor((mouseY - top - heightTopRatio) / heightEmptyRatio) + 1;
 			if (Input.GetMouseButtonDown(0)){
-				if (!objNames[objStart + mousePosition - 1].Equals("")){
-					print ("use");
+				string objName = objNames[objStart + mousePosition - 1];
+				if (objName.Equals("paper")){
+					if (paperPosition > 0){
+						PaperControl.isClosing = true;
+						PaperControl.isOpen = false;
+						paperPosition = 0;
+					}else {
+						PaperControl.isOpening = true;
+						PaperControl.isOpen = true;
+						paperPosition = objStart + mousePosition;
+					}
+				} else if (!objName.Equals("")){
+					//print ("use");
 					if (isUsed == objStart + mousePosition){
 						isUsed = 0;
 					} else {
 						isUsed = objStart + mousePosition;
 					}
 				} else {
-					print ("not use");
+					//print ("not use");
 					isUsed = 0;
 				}
 			}
@@ -107,7 +144,7 @@ public class ObjShelf : MonoBehaviour {
 				state = LevelControl1.STATES.YellowUsed;
 			}
 			if (name.Equals ("lighter")) {
-				state = LevelControl1.STATES.LighterUsed;
+				state = LevelControl1.STATES.LighterPicked;
 			}
 
 			LevelControl1.state = state;
@@ -119,32 +156,37 @@ public class ObjShelf : MonoBehaviour {
 
 	void OnGUI () {
 
+		if (shelfPosition < -width)
+			return;
 
 		GUI.skin = skin;
 
-		GUI.DrawTexture (new Rect (0, top, width, heightTopRatio), textureTop);
-		GUI.DrawTexture (new Rect (0, top + heightTopRatio, width, heightEmptyRatio), textures[0]);
-		GUI.DrawTexture (new Rect (0, top + heightTopRatio + heightEmptyRatio, width, heightEmptyRatio), textures[1]);
-		GUI.DrawTexture (new Rect (0, top + heightTopRatio + heightEmptyRatio * 2, width, heightEmptyRatio), textures[2]);
-		GUI.DrawTexture (new Rect (0, top + heightTopRatio + heightEmptyRatio * 3, width, heightEmptyRatio), textures[3]);
-		GUI.DrawTexture (new Rect (0, top + heightTopRatio + heightEmptyRatio * 4, width, heightEmptyRatio), textures[4]);
-		GUI.DrawTexture (new Rect (0, top + heightTopRatio + heightEmptyRatio * 5, width, heightBottomRatio), textureBottom);
+		GUI.DrawTexture (new Rect (shelfPosition, top, width, heightTopRatio), textureTop);
+		GUI.DrawTexture (new Rect (shelfPosition, top + heightTopRatio, width, heightEmptyRatio), textures[0]);
+		GUI.DrawTexture (new Rect (shelfPosition, top + heightTopRatio + heightEmptyRatio, width, heightEmptyRatio), textures[1]);
+		GUI.DrawTexture (new Rect (shelfPosition, top + heightTopRatio + heightEmptyRatio * 2, width, heightEmptyRatio), textures[2]);
+		GUI.DrawTexture (new Rect (shelfPosition, top + heightTopRatio + heightEmptyRatio * 3, width, heightEmptyRatio), textures[3]);
+		GUI.DrawTexture (new Rect (shelfPosition, top + heightTopRatio + heightEmptyRatio * 4, width, heightEmptyRatio), textures[4]);
+		GUI.DrawTexture (new Rect (shelfPosition, top + heightTopRatio + heightEmptyRatio * 5, width, heightBottomRatio), textureBottom);
 
 		
 		//GUI.backgroundColor = Color.blue;
 		if (isUsed == 0 && mousePosition > 0) {
-			GUI.Box (new Rect (0, top + heightTopRatio + heightEmptyRatio * (mousePosition - 1), width, heightEmptyRatio), "");
+			GUI.Box (new Rect (shelfPosition, top + heightTopRatio + heightEmptyRatio * (mousePosition - 1), width, heightEmptyRatio), "");
 		}
 		if (isUsed > 0 && objStart < isUsed && isUsed < objStart + 6) {
-			GUI.Box (new Rect (0, top + heightTopRatio + heightEmptyRatio * (isUsed - 1 - objStart), width, heightEmptyRatio), "");
+			GUI.Box (new Rect (shelfPosition, top + heightTopRatio + heightEmptyRatio * (isUsed - 1 - objStart), width, heightEmptyRatio), "");
+		}
+		if (paperPosition > 0 && objStart < paperPosition && paperPosition < objStart + 6) {
+			GUI.Box (new Rect (shelfPosition, top + heightTopRatio + heightEmptyRatio * (paperPosition - 1 - objStart), width, heightEmptyRatio), "");
 		}
 
 		GUI.color = Color.white;
 		GUI.skin.button.fontSize = 30;
-		if (GUI.Button (new Rect (0, 0, width, top), "▲")) {
+		if (GUI.Button (new Rect (shelfPosition, 0, width, top), "▲")) {
 			if (objStart > 0) objStart--;
 		}
-		if (GUI.Button (new Rect (0, Screen.height - top, width, top), "▼")) {
+		if (GUI.Button (new Rect (shelfPosition, Screen.height - top, width, top), "▼")) {
 			if (objStart < 5) objStart++;
 		}
 
@@ -160,6 +202,9 @@ public class ObjShelf : MonoBehaviour {
 			objNames[objNum] = name;
 			objNum++;
 		}
+	}
+	public void closePaper(){
+		paperPosition = 0;
 	}
 	public float getShelfWidth(){
 		return width;
@@ -180,6 +225,8 @@ public class ObjShelf : MonoBehaviour {
 			return textureYellowLens;
 		if (name.Equals ("lighter"))
 			return textureLighter;
+		if (name.Equals ("paper"))
+			return texturePaper;
 		
 		return textureEmpty;
 	}

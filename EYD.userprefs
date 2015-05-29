@@ -1,24 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Scene1\YellowAnim.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Scene1\ObjShelf.cs">
     <Files>
-      <File FileName="Assets\Script\Scene1\BabyFloat.cs" Line="20" Column="104" />
-      <File FileName="Assets\Script\Scene1\YellowAnim.cs" Line="41" Column="40" />
+      <File FileName="Assets\Script\Scene1\PaperControl.cs" Line="40" Column="4" />
+      <File FileName="Assets\Script\Scene1\ObjShelf.cs" Line="94" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="D:\Project\EYD\Assets\Script\Scene1\Matis.cs" line="23" />
-      <Breakpoint file="D:\Project\EYD\Assets\Script\Scene1\YellowAnim.cs" line="82" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="Assets\Script\Scene1\BabyFloat.cs" line="19" offsetX="782" offsetY="378" expression="baby" liveUpdate="False" />
-    <Watch file="Assets\Script\Scene1\BabyFloat.cs" line="19" offsetX="782" offsetY="378" expression="baby.transform.position" liveUpdate="False" />
-    <Watch file="Assets\Script\Scene1\Matis.cs" line="23" offsetX="737" offsetY="266" expression="cam.transform.position" liveUpdate="False" />
-    <Watch file="Assets\Script\Scene1\Matis.cs" line="23" offsetX="745" offsetY="302" expression="head.transform.position" liveUpdate="False" />
-    <Watch file="Assets\Script\Scene1\Matis.cs" line="23" offsetX="807" offsetY="357" expression="dest" liveUpdate="False" />
-    <Watch file="Assets\Script\Scene1\Matis.cs" line="25" offsetX="805" offsetY="397" expression="origin" liveUpdate="False" />
-    <Watch file="Assets\Script\Scene1\YellowAnim.cs" line="82" offsetX="382" offsetY="1701" expression="beetle_wait" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
