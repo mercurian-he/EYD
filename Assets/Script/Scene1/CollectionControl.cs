@@ -23,8 +23,10 @@ public class CollectionControl : MonoBehaviour {
 			if (colliderObj.tag.Equals ("Collections")) {
 				halo = colliderObj.GetComponent ("Halo");
 				halo.GetType ().GetProperty ("enabled").SetValue (halo, true, null);
-				if (Input.GetMouseButton (1)) {
+				ObjControl.selectingObj = true;
+				if (Input.GetMouseButtonDown (0)) {
 					objShelf.addCollection (colliderObj.name); 
+					//colliderObj.SetActive(false);
 					Destroy (colliderObj);
 				}
 			} else

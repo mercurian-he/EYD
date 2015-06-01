@@ -51,11 +51,16 @@
      <Compile Include="Assets\Script\Const.cs" />
      <Compile Include="Assets\Script\GlobalManager.cs" />
      <Compile Include="Assets\Script\Scene1\BabyFloat.cs" />
+     <Compile Include="Assets\Script\Scene1\Bamboo.cs" />
+     <Compile Include="Assets\Script\Scene1\BlueAnim.cs" />
      <Compile Include="Assets\Script\Scene1\CameraControl.cs" />
      <Compile Include="Assets\Script\Scene1\CollectionControl.cs" />
      <Compile Include="Assets\Script\Scene1\LevelControl1.cs" />
+     <Compile Include="Assets\Script\Scene1\LighterControl.cs" />
      <Compile Include="Assets\Script\Scene1\ObjControl.cs" />
      <Compile Include="Assets\Script\Scene1\ObjShelf.cs" />
+     <Compile Include="Assets\Script\Scene1\PaperControl.cs" />
+     <Compile Include="Assets\Script\Scene1\Trans.cs" />
      <Compile Include="Assets\Script\Scene1\WaterballControl.cs" />
      <Compile Include="Assets\Script\Scene1\YellowAnim.cs" />
      <Compile Include="Assets\Script\Scene2\LevelControl2.cs" />
@@ -64,6 +69,7 @@
      <None Include="Assets\Shader\watershader.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Shader\double-face_texture.shader" />
+     <None Include="Assets\KY_effects\MagicEffectsPackFree\ReadMe.txt" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Elementals\!Readme.txt" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />

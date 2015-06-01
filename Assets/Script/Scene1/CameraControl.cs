@@ -36,8 +36,9 @@ public class CameraControl : MonoBehaviour {
 		//	return;
 
 		//look up and down
-		if (Input.GetKeyDown (KeyCode.Space)) {
-			viewControlOn = !viewControlOn;
+		viewControlOn = true;
+		if (ObjShelf.shelfOpen || PaperControl.isOpen) {
+			viewControlOn = false;
 		}
 		if (viewControlOn) {
 			rotationY += Input.GetAxis ("Mouse Y") * mouseSensitivityY;
