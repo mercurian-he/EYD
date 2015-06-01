@@ -15,6 +15,7 @@ public class LighterControl : MonoBehaviour {
 		lighter = GameObject.Find ("Lighter Using");
 		halo = GameObject.Find ("Lighter Halo").GetComponent ("Halo");
 		plane = GameObject.Find ("Collider Plane");
+		isUsed = false;
 	}
 	
 	// Update is called once per frame

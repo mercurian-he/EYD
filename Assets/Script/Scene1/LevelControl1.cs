@@ -17,6 +17,10 @@ public class LevelControl1 : MonoBehaviour {
 
 	public static STATES state;
 
+	public Texture backTexture;
+
+	private bool msgShow = true;
+
 	private GameObject directionalLight;
 	private Color lightColor;
 
@@ -32,11 +36,13 @@ public class LevelControl1 : MonoBehaviour {
 	private GameObject[] yellowVisibles;
 
 	/*other relative objects*/
-	private GameObject beetle;
+	//private GameObject beetle;
 
 
 	// Use this for initialization
 	void Start () {
+		msgShow = true;
+
 		state = STATES.Start;
 
 		directionalLight = GameObject.Find("Directional Light");
@@ -56,7 +62,7 @@ public class LevelControl1 : MonoBehaviour {
 		yellowVisibles = GameObject.FindGameObjectsWithTag("Yellow Visible");
 
 
-		beetle = GameObject.Find("beetle");
+		//beetle = GameObject.Find("beetle");
 
 
 		initObjs ();
@@ -66,8 +72,11 @@ public class LevelControl1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		initObjs ();
+		if (Input.GetKey (KeyCode.Space)) {
+			msgShow = false;
+		}
 
+		initObjs ();
 		switch (state) {
 		case STATES.Start:
 			if (yellowLens){
@@ -91,7 +100,7 @@ public class LevelControl1 : MonoBehaviour {
 			foreach (GameObject go in greenVisibles){
 				go.SetActive(true);
 			}
-			beetle.SetActive(false);
+			//beetle.SetActive(false);
 			break;
 		case STATES.BlueUsed:
 			directionalLight.GetComponent<Light>().color = Color.blue;
@@ -113,20 +122,32 @@ public class LevelControl1 : MonoBehaviour {
 			break;
 		case STATES.LighterPicked:
 			LighterControl.isUsed = true;
-			//if (PaperControl.isOpen && Input.GetMouseButtonDown(0)){
-				//state = STATES.LighterUsed;
-			//}
 			break;
 		case STATES.LighterUsed:
+			//burn
+			ObjShelf1.deleteCollection("paper");
+			Application.LoadLevel(2);
+			state = STATES.Finish;
 			break;
 		case STATES.Finish:
+			Application.LoadLevel(2);
 			break;
 
 		}
 	}
 
 	void OnGUI(){
-		if (GUI.Button (new Rect(Screen.width - 210, Screen.height - 40, 200, 30), "Return to Menu")){
+
+		if (msgShow) {
+			GUI.color = Color.black;
+			GUI.Label(new Rect(Screen.width / 2 - 200, Screen.height * 3 / 4, 400, 100), "Press Space to open the shelf to store collections");
+		}
+
+		if (!ObjShelf1.shelfOpen)
+			return;
+		if (GUI.Button (new Rect(Screen.width - 100, 10, 100, 100), backTexture)){
+			PlayerControl1.selectingObj = true;
+			StartMenu.LastLevel = 1;
 			Application.LoadLevel(0);
 		}
 	}

@@ -5,6 +5,8 @@ Project("{571995A8-FD7B-97E4-378B-6C2E6C44994F}") = "EYD", "Assembly-CSharp-firs
 EndProject
 Project("{571995A8-FD7B-97E4-378B-6C2E6C44994F}") = "EYD", "Assembly-CSharp-vs.csproj", "{D0359F72-9A84-0886-D6DF-F128F7DDF680}"
 EndProject
+Project("{571995A8-FD7B-97E4-378B-6C2E6C44994F}") = "EYD", "Assembly-CSharp-Editor-vs.csproj", "{76B526C7-DB1D-C2E1-125A-B383E10EBA71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +21,17 @@ Global
 		{D0359F72-9A84-0886-D6DF-F128F7DDF680}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0359F72-9A84-0886-D6DF-F128F7DDF680}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0359F72-9A84-0886-D6DF-F128F7DDF680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76B526C7-DB1D-C2E1-125A-B383E10EBA71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B526C7-DB1D-C2E1-125A-B383E10EBA71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B526C7-DB1D-C2E1-125A-B383E10EBA71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B526C7-DB1D-C2E1-125A-B383E10EBA71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-<<<<<<< HEAD
-																																																											GlobalSection(MonoDevelopProperties) = preSolution
+																																																																										GlobalSection(MonoDevelopProperties) = preSolution
 =======
-																																																		GlobalSection(MonoDevelopProperties) = preSolution
+																																																	GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/master
 =======
 																						GlobalSection(MonoDevelopProperties) = preSolution

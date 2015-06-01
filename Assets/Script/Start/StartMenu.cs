@@ -6,11 +6,13 @@ public class StartMenu : MonoBehaviour {
 	
 	int screenWidth = Screen.width;
 	int screenHeight = Screen.height;
-	int buttonWidth = 50;
+	int buttonWidth = 100;
 	int buttonHeight = 30;
 
 	public GUISkin startSkin;
 	public Texture textureBG;
+
+	public static int LastLevel = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -28,14 +30,18 @@ public class StartMenu : MonoBehaviour {
 		//GUI.skin = startSkin;
 		//GUI.DrawTexture (new Rect (0, 0, screenWidth, screenHeight), textureBG);
 
-		if (GUI.Button (new Rect (10, 10, buttonWidth, buttonHeight), "Start")) {
-			print("Start is pressed");
+		if (GUI.Button (new Rect (0, screenHeight - buttonHeight * 3, buttonWidth, buttonHeight), "Start")) {
+			//print("Start is pressed");
 			//GameControl.gameState = GameControl.GAMESTATE.Level1;
 			//int l = (int) GameControl.GAMESTATE.Level1;
 			Application.LoadLevel(1);
 		}
 
-		if (GUI.Button (new Rect (10, 40, buttonWidth, buttonHeight), "Quit")) {
+		if (GUI.Button (new Rect (0, screenHeight - buttonHeight, buttonWidth, buttonHeight), "Continue")) {
+			Application.LoadLevel(LastLevel);
+		}
+
+		if (GUI.Button (new Rect (screenWidth - buttonWidth, screenHeight - buttonHeight, buttonWidth, buttonHeight), "Quit")) {
 			Application.Quit();
 		}
 

@@ -3,7 +3,6 @@ using System.Collections;
 
 public class PaperControl : MonoBehaviour {
 
-	private ObjShelf objShelf;
 	private GameObject paper;
 	private GameObject colliderObj = null;
 
@@ -18,8 +17,12 @@ public class PaperControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		objShelf = (ObjShelf) GameObject.Find("Main Camera").GetComponent("ObjShelf");
 		paper = GameObject.Find ("Hint_Paper");
+
+		inShelf = false;
+		isOpen = true;
+		isOpening = false;
+		isClosing = false;
 	}
 	
 	// Update is called once per frame
@@ -31,7 +34,7 @@ public class PaperControl : MonoBehaviour {
 		if (Physics.Raycast (ray, out hit, 10f)) {
 			colliderObj = hit.collider.gameObject;
 			if (colliderObj.name.Equals("Hint_Paper")){
-				ObjControl.selectingObj = true;
+				PlayerControl1.selectingObj = true;
 				if (Input.GetMouseButtonDown(0) && !LighterControl.isUsed){
 					isClosing = true;
 				}
@@ -44,10 +47,7 @@ public class PaperControl : MonoBehaviour {
 		}
 		if (isClosing) {
 			closePaper();
-<<<<<<< HEAD
 			isOpen = false;
-=======
->>>>>>> origin/master
 		}
 	}
 
@@ -72,14 +72,14 @@ public class PaperControl : MonoBehaviour {
 			curScale -= scaleSpeed;
 			if (curScale <= scaleMin){
 				//paper.SetActive(false);
-				objShelf.closePaper();
+				ObjShelf1.closePaper();
 				isClosing = false;
 			}
 		}
 		paper.transform.localScale = new Vector3(curScale, curScale, curScale);
 
 		if (!inShelf) {
-			objShelf.addCollection ("paper"); 
+			ObjShelf1.addCollection ("paper"); 
 			inShelf = true;
 		}
 	}

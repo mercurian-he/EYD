@@ -3,13 +3,11 @@ using System.Collections;
 
 public class CollectionControl : MonoBehaviour {
 
-	private ObjShelf objShelf;
 	private GameObject colliderObj = null;
 	Component halo = null;
 	
 	// Use this for initialization
 	void Start () {
-		objShelf = (ObjShelf) GameObject.Find("Main Camera").GetComponent("ObjShelf");
 	}
 
 
@@ -23,9 +21,9 @@ public class CollectionControl : MonoBehaviour {
 			if (colliderObj.tag.Equals ("Collections")) {
 				halo = colliderObj.GetComponent ("Halo");
 				halo.GetType ().GetProperty ("enabled").SetValue (halo, true, null);
-				ObjControl.selectingObj = true;
+				PlayerControl1.selectingObj = true;
 				if (Input.GetMouseButtonDown (0)) {
-					objShelf.addCollection (colliderObj.name); 
+					ObjShelf1.addCollection (colliderObj.name); 
 					//colliderObj.SetActive(false);
 					Destroy (colliderObj);
 				}
