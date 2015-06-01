@@ -44,7 +44,10 @@ public class PaperControl : MonoBehaviour {
 		}
 		if (isClosing) {
 			closePaper();
+<<<<<<< HEAD
 			isOpen = false;
+=======
+>>>>>>> origin/master
 		}
 	}
 

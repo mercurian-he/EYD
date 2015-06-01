@@ -11,8 +11,12 @@ public class ObjShelf : MonoBehaviour {
 	private const float heightEmpty = 478f;
 
 	private float moveSpeed = 5.0f;
+<<<<<<< HEAD
 
 	public static bool shelfOpen = false;
+=======
+	private bool shelfOpen = false;
+>>>>>>> origin/master
 	private float shelfPosition;
 
 	private float ratio;
