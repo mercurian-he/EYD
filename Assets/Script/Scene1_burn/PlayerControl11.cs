@@ -59,7 +59,7 @@ public class PlayerControl11 : MonoBehaviour {
 		//move
 		
 		if (selectingObj) {
-			if (Input.GetMouseButtonDown(0)){
+			if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)){
 				selectingObj = false;
 			}
 			return;

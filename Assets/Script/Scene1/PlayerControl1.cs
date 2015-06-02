@@ -30,7 +30,6 @@ public class PlayerControl1 : MonoBehaviour {
 		joltDelta = joltMax / 10f;
 
 		shelfWidth = ObjShelf1.getShelfWidth ();
-		print (shelfWidth);
 	}
 	
 	// Update is called once per frame
@@ -60,7 +59,7 @@ public class PlayerControl1 : MonoBehaviour {
 		//move
 
 		if (selectingObj) {
-			if (Input.GetMouseButtonDown(0)){
+			if (Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow)){
 				selectingObj = false;
 			}
 			return;

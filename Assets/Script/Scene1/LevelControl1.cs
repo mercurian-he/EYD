@@ -145,7 +145,7 @@ public class LevelControl1 : MonoBehaviour {
 
 		if (!ObjShelf1.shelfOpen)
 			return;
-		if (GUI.Button (new Rect(Screen.width - 100, 10, 100, 100), backTexture)){
+		if (GUI.Button (new Rect(Screen.width - 50, Screen.height - 50, 50, 50), backTexture)){
 			PlayerControl1.selectingObj = true;
 			StartMenu.LastLevel = 1;
 			Application.LoadLevel(0);
